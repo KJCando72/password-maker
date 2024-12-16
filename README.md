@@ -1,5 +1,6 @@
 This is a password generator that uses a combination of JavaScript, HTML, and CSS styling to provide a simple experience that is needed in our technologically-advancing age.
-
+## Example
+![Password Example](Password-Maker-Example.png)
 
 # *HOW TO USE*
 1. Use the number incremeneter to choose how long you want your password to be
