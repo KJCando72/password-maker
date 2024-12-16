@@ -1,16 +1,49 @@
-#countLab {
-    font-size: 10em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    display: block;
+@keyframes changeColor {
+    0% {
+        color: black;
+    }
+    50% {
+        color: darkgoldenrod;
+    }
+    100% {
+        color: black;
+    }
 }
 
-#btnBunch {
-    display: block;
-    text-align: center;
+body {
+    align-items: center;
+    justify-items: center;
 }
 
-.subBTN {
+#form {
+    background-color: blanchedalmond;
+    margin: auto;
+    max-width: 450px;
+    box-shadow: 5px 5px 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: changeColor 2s infinite;
+    font-style: italic;
+}
+
+#checks label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    transition: color 0.5s;
+}
+
+#checks label:hover {
+    color: crimson;
+    cursor: pointer;
+}
+
+#subBTN {
     padding: 10px 20px;
     font-size: 1.5em;
     background-color: rgb(229, 83, 83);
@@ -19,7 +52,12 @@
     transition: background-color 0.25s;
 }
 
-.subBTN:hover {
+#subBTN:hover {
     background-color:rgb(160, 60, 60);
 }
 
+#pword {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
