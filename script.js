@@ -6,7 +6,7 @@ const numberButton = document.getElementById("numbers");
 const submitButton = document.getElementById("subBTN");
 const pword = document.getElementById("pword");
 
-//Allows number incrementer input to be implemented into function
+//allows number incrementer to be implemented into function
 let pSize;
 
 
@@ -21,22 +21,13 @@ function makePassword(){
     let allowedChars = "";
     let password = ""; 
 
- //Takes out any options that aren't checked from the password maker.
+//takes out any of the options that aren't checked from being in the password
     allowedChars += lowerButton.checked ? lowerChars : "";
     allowedChars += upperButton.checked ? upperChars : "";
     allowedChars += symbolButton.checked ? symbolChars : "";
     allowedChars += numberButton.checked ? numberChars : "";
     
-    
- //Troubleshooting for when the user doesn't input specific info.
-    if(pSize <= 0){
-       pword.textContent = `Please select a bigger number`; 
-    }
-    if(allowedChars === 0){
-        pword.textContent =  `Select One of the boxes`;
-    }
-
-    //Floor function prevents any out-of-bounds errors in password creation
+//floor function made to catch any out-of-bound errors or decimals
     for(let i = 0; i < pSize; i++){
         const randomIndex = Math.floor(Math.random() * allowedChars.length);
         password += allowedChars[randomIndex];
@@ -44,7 +35,16 @@ function makePassword(){
     return password;
 }
 
+//if functions catch any errors that would disrupt password making process
 submitButton.onclick = function(){
     const password = makePassword();
-    pword.textContent = `Generated Password: ${password}`;
+    if(pSize >= 35){
+        pword.textContent = `LENGTH TOO LONG. PLEASE MAKE IT SHORTER`;
+    }
+    else if(pSize <= 0){
+        pword.textContent = `PASSWORD CANNOT BE 0. PLEASE MAKE IT LONGER`; 
+     }
+    else {
+        pword.textContent = `Generated Password: ${password}`;
+    }
 }
