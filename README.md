@@ -10,7 +10,7 @@ This is a password generator that uses a combination of JavaScript, HTML, and CS
 5. Copy the selected password and paste it wherever you need it
 
 
-# ERRORS AND TO DO LIST
+# *ERRORS AND TO DO LIST*
 Below is a list of errors and problems that currently reside in the code, will be updated when supposed problems are fixed.
 * Password limit set to `35` due to problems with fitting the password in completely inside the space
 * Implement an error display in `script.js` when the user doesn't select any of the boxes to generate password 
