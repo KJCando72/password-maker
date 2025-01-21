@@ -1,4 +1,4 @@
-This is a password generator that uses a combination of JavaScript, HTML, and CSS styling to provide a simple experience that is needed in our technologically-advancing age.
+This is a password generator that uses a combination of JavaScript, HTML, and CSS styling to provide a simple experience that is needed in our technologically-advancing age. This project was done in Visual Studio Code, using a live server add-on to output the code.
 ## Example
 ![Password Example](Password-Maker-Example.png)
 
