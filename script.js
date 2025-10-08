@@ -16,35 +16,39 @@ const symbolChars = `~!@#$%^&*()-_=+[{|}];:'",<.>/?`;
 const numberChars = `1234567890`;
 
 
+//function to make password based on user input
 function makePassword(){
     pSize = Number(pwordlength.value);
     let allowedChars = "";
     let password = ""; 
 
-//takes out any of the options that aren't checked from being in the password
+    //takes out any of the options that aren't checked from being in the password
     allowedChars += lowerButton.checked ? lowerChars : "";
     allowedChars += upperButton.checked ? upperChars : "";
     allowedChars += symbolButton.checked ? symbolChars : "";
     allowedChars += numberButton.checked ? numberChars : "";
     
-//floor function made to catch any out-of-bound errors or decimals
+    //floor function made to catch any out-of-bound errors or decimals
     for(let i = 0; i < pSize; i++){
         const randomIndex = Math.floor(Math.random() * allowedChars.length);
         password += allowedChars[randomIndex];
     }
-    return password;
+    return { password, allowedChars };
 }
 
 //if functions catch any errors that would disrupt password making process
 submitButton.onclick = function(){
-    const password = makePassword();
-    if(pSize >= 35){
-        pword.textContent = `LENGTH TOO LONG. PLEASE MAKE IT SHORTER`;
-    }
-    else if(pSize <= 0){
-        pword.textContent = `PASSWORD CANNOT BE 0. PLEASE MAKE IT LONGER`; 
+    const result = makePassword();
+    const password = result.password;
+    const allowedChars = result.allowedChars;
+    if(pSize <= 0){
+        pword.textContent = `Password length must be at least 1 character`; 
      }
+    else if(allowedChars.length === 0){
+        pword.textContent = "Please select at least one character type";
+    }
     else {
         pword.textContent = `Generated Password: ${password}`;
     }
 }
+
