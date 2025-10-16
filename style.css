@@ -61,3 +61,16 @@ h1 {
     font-size: 20px;
     font-weight: bold;
 }
+
+#random {
+    padding: 5px 10px;
+    font-size: 1.5em;
+    background-color: rgb(83, 156, 229);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+#random:hover {
+    background-color:rgb(60, 110, 160);
+}
