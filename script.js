@@ -3,6 +3,7 @@ const upperButton = document.getElementById("upper");
 const lowerButton = document.getElementById("lower");
 const symbolButton = document.getElementById("symbols");
 const numberButton = document.getElementById("numbers");
+const randomize = document.getElementById("random");
 const submitButton = document.getElementById("subBTN");
 const pword = document.getElementById("pword");
 
@@ -35,6 +36,16 @@ function makePassword(){
     }
     return { password, allowedChars };
 }
+
+//randomizes all options if randomize is checked
+randomize.onclick = function(){
+    pSize = Math.floor(Math.random() * 30) + 5;
+    pwordlength.value = pSize;
+    lowerButton.checked = Math.random() < 0.5;
+    upperButton.checked = Math.random() < 0.5;
+    symbolButton.checked = Math.random() < 0.5;
+    numberButton.checked = Math.random() < 0.5;
+    }
 
 //if functions catch any errors that would disrupt password making process
 submitButton.onclick = function(){
