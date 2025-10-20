@@ -13,6 +13,7 @@
 body {
     align-items: center;
     justify-items: center;
+    background: linear-gradient(to right, #4c88a0 0%, #94eaf5 100%);
 }
 
 #form {
@@ -74,4 +75,5 @@ h1 {
 #random:hover {
     background-color:rgb(60, 110, 160);
 }
+
 
