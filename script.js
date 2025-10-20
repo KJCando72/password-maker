@@ -45,7 +45,14 @@ randomize.onclick = function(){
     upperButton.checked = Math.random() < 0.5;
     symbolButton.checked = Math.random() < 0.5;
     numberButton.checked = Math.random() < 0.5;
+        
+    //ensures at least one option is selected
+    if(!lowerButton.checked && !upperButton.checked && !symbolButton.checked && !numberButton.checked){
+        const options = [lowerButton, upperButton, symbolButton, numberButton];
+        const randomOption = options[Math.floor(Math.random() * options.length)];
+        randomOption.checked = true;
     }
+}
 
 //if functions catch any errors that would disrupt password making process
 submitButton.onclick = function(){
@@ -62,4 +69,5 @@ submitButton.onclick = function(){
         pword.textContent = `Generated Password: ${password}`;
     }
 }
+
 
