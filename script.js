@@ -6,6 +6,7 @@ const numberButton = document.getElementById("numbers");
 const randomize = document.getElementById("random");
 const submitButton = document.getElementById("subBTN");
 const pword = document.getElementById("pword");
+const copyclip = document.getElementById("copy");
 
 //allows number incrementer to be implemented into function
 let pSize;
@@ -67,6 +68,14 @@ submitButton.onclick = function(){
     }
     else {
         pword.textContent = `Generated Password: ${password}`;
+    }
+}
+
+copyclip.onclick = async function(){
+    try{
+        await navigator.clipboard.writeText(pword.textContent.slice(20));
+    } catch (error) {
+        console.log(`Error, try copying again.`);
     }
 }
 
