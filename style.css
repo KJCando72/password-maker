@@ -13,7 +13,7 @@
 body {
     align-items: center;
     justify-items: center;
-    background: linear-gradient(to right, #4c88a0 0%, #94eaf5 100%);
+    background: linear-gradient(to right, #a0804c 0%, #f5d094 100%);
 }
 
 #form {
@@ -24,7 +24,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 h1 {
@@ -46,7 +46,7 @@ h1 {
 
 #subBTN {
     padding: 10px 20px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     background-color: rgb(229, 83, 83);
     border-radius: 10px;
     cursor: pointer;
@@ -65,7 +65,7 @@ h1 {
 
 #random {
     padding: 5px 10px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     background-color: rgb(83, 156, 229);
     border-radius: 10px;
     cursor: pointer;
@@ -78,7 +78,7 @@ h1 {
 
 #copy {
     padding: 5px 10px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     background-color: rgb(229, 195, 83);
     border-radius: 10px;
     cursor: pointer;
